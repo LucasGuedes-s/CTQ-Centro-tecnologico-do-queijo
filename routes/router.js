@@ -1,7 +1,12 @@
 const { Router } = require('express');
-const login = require('../controllers/HomeController')
+const Home = require('../controllers/HomeController')
+const Login = require('../controllers/LoginController')
+const Solicitar = require('../controllers/SolicitarController') 
 
 const routes= new Router();
-routes.get('/', login.login);
+
+routes.get('/', Home.home);
+routes.get('/login', Login.login);
+routes.get('/solicitar', Solicitar.pedido);
 
 module.exports = routes;

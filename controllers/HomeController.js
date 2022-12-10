@@ -1,6 +1,6 @@
 class HomeController{
-    login(req, res){
-        res.render('pages/login');
+    home(req, res){
+        res.render('pages/home');
     }
 }
 module.exports = new HomeController();
