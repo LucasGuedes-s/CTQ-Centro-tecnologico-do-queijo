@@ -10,23 +10,30 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model usuario {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  senha password
-  nome  String?
-
+model usuarios {
+  id      Int       @id @default(autoincrement())
+  email   String    @unique
+  senha   String
+  nome    String?
+  pedidos pedidos[]
 }
 
 model pedidos {
-  id        Int     @id @default(autoincrement())
-  produto   String
+  id         Int      @id @default(autoincrement())
+  email      String   @unique
+  produto    String
   quantidade Int
-  cidade String @db.VarChar(15)
-  estado String @db.VarChar(10)
-  cep Int
-  endereco String @db.VarChar(50)
-  data String
-  
-  id_usuario  @relation("usuario" fields: [usuarioId], references: [id])
+  cidade     String
+  estado     String
+  cep        Int
+  endereco   String
+  data       DateTime
+  author     usuarios @relation(fields: [authorId], references: [id])
+  authorId   Int
+}
+
+model administradores {
+  id        Int    @id @default(autoincrement())
+  matricula Int
+  senha     String
 }
