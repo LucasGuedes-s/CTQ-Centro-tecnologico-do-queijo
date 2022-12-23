@@ -10,7 +10,7 @@ const routes= new Router();
 
 routes.get('/', Home.home);
 routes.get('/login', Login.login);
-routes.get('/solicitar', Solicitar.pedido);
+routes.post('/solicitar', Solicitar.cliente);
 routes.get('/loginadm', LoginAdm.loginadm)
 routes.get('/cadastro', Cadastro.cadastro)
 routes.post('/usuarios', AddUser.AddUser)

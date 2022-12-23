@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@prisma/client": "^4.8.0",
+    "bcrypt": "^5.1.0",
     "body-parser": "^1.20.1",
     "cors": "^2.8.5",
     "ejs": "^3.1.8",
