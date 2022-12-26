@@ -1,18 +1,23 @@
 const { Router } = require('express');
+const auth = require('../middleware/auth')
 const Home = require('../controllers/HomeController')
 const Login = require('../controllers/LoginController')
-const Solicitar = require('../controllers/SolicitarController') 
+const LoginUser = require('../controllers/LoginUserController') 
 const LoginAdm = require('../controllers/LoginAdmController') 
 const Cadastro = require('../controllers/CadastroController') 
 const AddUser = require('../controllers/UsuarioController')
+const Solicitar = require('../controllers/SolicitarController')
 
 const routes= new Router();
 
 routes.get('/', Home.home);
 routes.get('/login', Login.login);
-routes.post('/solicitar', Solicitar.cliente);
+routes.get('/logout', LoginUser.logout)
+
+routes.post('/loginuser', LoginUser.cliente);
 routes.get('/loginadm', LoginAdm.loginadm)
 routes.get('/cadastro', Cadastro.cadastro)
 routes.post('/usuarios', AddUser.AddUser)
+routes.get('/solicitar', auth, Solicitar.solicitar);
 
 module.exports = routes;

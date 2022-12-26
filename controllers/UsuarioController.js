@@ -13,6 +13,11 @@ class UsuarioController{
         const nome = req.body.nome;
 
         const hash = bcrypt.hashSync(senha, saltRounds);
+
+        const user = await prisma.usuarios.findUnique({where: {email}})
+        if(user){
+            return res.render('pages/cadastro', { Error: "Já existe um usuário com esse email" })
+        }
     
         const response = await prisma.usuarios.create({
             data: {

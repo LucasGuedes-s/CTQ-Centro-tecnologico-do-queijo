@@ -3,7 +3,7 @@ prisma = new PrismaClient()
 
 
 class LoginController{
-    login(req, res){
+    async login(req, res){
         res.render("pages/login")
     }
 }
