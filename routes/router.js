@@ -13,11 +13,10 @@ const routes= new Router();
 routes.get('/', Home.home);
 routes.get('/login', Login.login);
 routes.get('/logout', LoginUser.logout)
-
-routes.post('/loginuser', LoginUser.cliente);
-routes.get('/loginadm', LoginAdm.loginadm)
+routes.post('/loginuser', LoginUser.loginuser);
+routes.post('/loginadm', LoginAdm.loginadm)
 routes.get('/cadastro', Cadastro.cadastro)
-routes.post('/usuarios', AddUser.AddUser)
+routes.post('/adduser', AddUser.adduser)
 routes.get('/solicitar', auth, Solicitar.solicitar);
 
 module.exports = routes;

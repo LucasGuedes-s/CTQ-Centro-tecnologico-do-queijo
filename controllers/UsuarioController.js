@@ -6,7 +6,7 @@ const saltRounds = 10;
 
 class UsuarioController{
 
-    async AddUser(req, res) {
+    async adduser(req, res) {
         const body = req.body;
         const email = req.body.email;
         const senha = req.body.senha;

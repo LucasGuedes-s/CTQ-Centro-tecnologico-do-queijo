@@ -2,6 +2,7 @@ const { PrismaClient } = require('@prisma/client');
 prisma = new PrismaClient()
 
 class PedidosController{
+
     async Addpedido(req, res) {
         const body = req.body;
         const email = req.body.email;

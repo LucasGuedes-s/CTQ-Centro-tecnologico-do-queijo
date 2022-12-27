@@ -2,12 +2,11 @@ const { PrismaClient } = require('@prisma/client');
 prisma = new PrismaClient()
 
 const bcrypt = require('bcrypt');
-const { solicitar } = require('./SolicitarController');
 const saltRounds = 10;
 
 class LoginUserController {
 
-    async cliente(req, res) {
+    async loginuser(req, res) {
 
         const body = req.body;
         const email = body.email;
@@ -22,7 +21,7 @@ class LoginUserController {
         const senhavalida = bcrypt.compareSync(senha, user.senha);
 
         if (!senhavalida) {
-            res.redirect('/home');
+            res.redirect('/');
         }
         else {
             req.session.user = user.id;

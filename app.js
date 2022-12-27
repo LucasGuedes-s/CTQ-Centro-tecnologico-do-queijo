@@ -1,5 +1,6 @@
 const express = require('express');
 const session = require("express-session");
+const adm = require('../controllers/AdmController') 
 const { json, urlencoded} = require("express")
 const app = express()
 const port = 80 
@@ -24,3 +25,4 @@ app.use(routes);
 app.listen(port, () => {
     console.log('Servidor iniciado')
 });
+
