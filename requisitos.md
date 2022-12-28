@@ -18,3 +18,15 @@ Emissão do relatório: Controla as contas que devem ser recebidas organizando-a
 
 Requisitos não funcionais: Segurança (autenticação dos usuários), Controle de acesso, acessibilidade, design.
 (Essencial, opcional, desejável)
+
+Segurança (autenticação dos usuários):  A prioridade da segurança é essencial,  a segurança da empresa é baseada em criptografias de ponta a ponta para proteger as senhas dos clientes, assim o cliente cria uma senha e o sistema  automaticamente vai fazer a criptografia da senha  garantindo que somente o cliente tenha acesso a sua própria senha.
+
+ Controle de acesso: A prioridade do controle de acesso é essencial, o controle de acesso irá gerenciar todas as demandas da plataforma,  os produtos são expostos para os clientes observarem  e escolherem quais produtos e a quantidade que irão adquirir. A plataforma terá um grupo de administradores que irá determinar se a solicitação de um determinado cliente  será aceita ou recusada.
+ 
+ Acessibilidade: A prioridade da acessibilidade é desejável, ela garante que o site tenha uma adaptação para que pessoas com necessidades especiais também tenham acesso a plataforma, esta plataforma trabalha com mecanismos  de leitura  sendo exposto em áudio o que está escrito ou em imagens e ainda  há adaptações para visualizar a fonte da plataforma. 
+
+ Design: A prioridade do design é desejável. o design irá facilitar a visualização  e a organização da plataforma, através do design as imagens dos produtos que estão sendo fabricados pelo Centro Tecnológico do Queijo (CTq) serão expostas para os clientes que têm acesso a plataforma.
+
+
+
+
