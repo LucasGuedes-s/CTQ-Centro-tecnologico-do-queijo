@@ -16,7 +16,7 @@ class UsuarioController{
 
         const user = await prisma.usuarios.findUnique({where: {email}})
         if(user){
-            return res.render('pages/cadastro', { Error: "Já existe um usuário com esse email" })
+            return res.render('pages/cadastro', { message: "Já existe um usuário com esse email" })
         }
     
         const response = await prisma.usuarios.create({
@@ -26,9 +26,7 @@ class UsuarioController{
                 nome: nome
             }
         });
-        //console.log(body);
         res.redirect("/login");
     }
-
 }
 module.exports = new UsuarioController();
