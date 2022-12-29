@@ -20,7 +20,7 @@ model usuarios {
 
 model pedidos {
   id         Int      @id @default(autoincrement())
-  email      String   @unique
+  email      String
   produto    String
   quantidade Int
   cidade     String

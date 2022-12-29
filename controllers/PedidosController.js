@@ -15,23 +15,24 @@ class PedidosController {
         const endereco = body.endereco;
         const data = body.data;
 
-        console.log("qqqq", id);
+        console.log('id aq', id);
 
         const user = await prisma.usuarios.findUnique({ where: { id: Number(id) } })
         if (!user) {
             return res.json({ message: "Ocorreu um erro!" })
         }
 
-        const response = await prisma.usuarios.create({
+        const response = await prisma.pedidos.create({
             data: {
                 email: email,
                 produto: produto,
-                quantidade: quantidade,
+                quantidade: Number(quantidade),
                 cidade: cidade,
                 estado: estado,
-                cep: cep,
+                cep: Number(cep),
                 endereco: endereco,
-                data: data
+                data: '2021-09-27 15:22:53.679985+02',
+                author: Number(id)
             },
             include: {
                 author: true
