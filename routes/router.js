@@ -9,18 +9,25 @@ const AddUser = require('../controllers/UsuarioController')
 const Solicitar = require('../controllers/SolicitarController')
 const Pedidos = require('../controllers/PedidosController')
 
+const AddAdm = require('../AdmPadrao') //Rota exclusiva para a criação de administradores
+
 
 const routes= new Router();
 
 routes.get('/', Home.home);
 routes.get('/login', Login.login);
-routes.get('/logout', LoginUser.logout)
+routes.get('/logout', LoginUser.logout);
 routes.post('/loginuser', LoginUser.loginuser);
-routes.post('/loginadm', LoginAdm.addadm)
-routes.get('/cadastro', Cadastro.cadastro)
-routes.post('/adduser', AddUser.adduser)
+
+routes.get('/loginadm', LoginAdm.loginadm);
+routes.post('/logaradm', LoginAdm.administrador);
+
+routes.get('/cadastro', Cadastro.cadastro);
+routes.post('/adduser', AddUser.adduser);
 routes.get('/solicitar', auth, Solicitar.solicitar);
+
 routes.post('/addpedido', Pedidos.addpedido);
 
+routes.get('/addadm', AddAdm.admuser);
 
 module.exports = routes;

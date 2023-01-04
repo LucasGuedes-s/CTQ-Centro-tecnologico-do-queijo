@@ -27,13 +27,14 @@ model pedidos {
   estado     String
   cep        Int
   endereco   String
-  data       DateTime
+  data       DateTime @db.Timestamp(3)
   author     usuarios @relation(fields: [authorId], references: [id])
   authorId   Int
+  status     String
 }
 
 model administradores {
   id        Int    @id @default(autoincrement())
-  matricula Int
+  matricula Int    @unique
   senha     String
 }

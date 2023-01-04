@@ -1,6 +1,5 @@
 const express = require('express');
 const session = require("express-session");
-//const adm = require('../controllers/AdmController') 
 const { json, urlencoded} = require("express")
 const app = express()
 const port = 80 
@@ -13,6 +12,7 @@ app.use(express.static('./public'));
 
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
+
 
 app.use(session({
     secret: 'dieidinxnenanaun',

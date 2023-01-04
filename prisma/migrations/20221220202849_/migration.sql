@@ -41,3 +41,4 @@ CREATE UNIQUE INDEX "pedidos_email_key" ON "pedidos"("email");
 
 -- AddForeignKey
 ALTER TABLE "pedidos" ADD CONSTRAINT "pedidos_authorId_fkey" FOREIGN KEY ("authorId") REFERENCES "usuarios"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+

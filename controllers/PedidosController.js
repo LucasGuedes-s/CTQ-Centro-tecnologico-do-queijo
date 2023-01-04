@@ -13,14 +13,23 @@ class PedidosController {
         const estado = body.estado;
         const cep = body.cep;
         const endereco = body.endereco;
+        
         const data = body.data;
+        
+        console.log(data);
 
         console.log('id aq', id);
+        
+        const date = new Date(data);
+        const result = date.toISOString();
+        
+        console.log(result);
 
         const user = await prisma.usuarios.findUnique({ where: { id: Number(id) } })
         if (!user) {
             return res.json({ message: "Ocorreu um erro!" })
         }
+        console.log(user);
 
         const response = await prisma.pedidos.create({
             data: {
@@ -31,10 +40,12 @@ class PedidosController {
                 estado: estado,
                 cep: Number(cep),
                 endereco: endereco,
-                data: '2021-09-27 15:22:53.679985+02',
-                author: Number(id)
+                data: result,
+                authorId: id,
+                status: 'Analise'
+
             },
-            include: {
+            include:{
                 author: true
             }
         });

@@ -2,32 +2,32 @@ const { PrismaClient } = require('@prisma/client');
 prisma = new PrismaClient()
 
 const bcrypt = require('bcrypt');
-const { solicitar } = require('./SolicitarController');
-const saltRounds = 10;
 
 class AdmController{
-    async addadm(res, req){
+    async loginadm(req, res){
+        res.render('pages/loginadm');
+
+    }
+    async administrador(req, res){
+        
         const body = req.body;
         const matricula = body.matricula;
+        const matriculaAdm = parseInt(matricula);
+
         const senha = body.senha;
-        const adm = await prisma.administradores.findFirst({
+        const user = await prisma.administradores.findFirst({
             where: {
-                matricula: matricula,
-                senha: senha,
+                matricula: matriculaAdm,     
             }
         });
-        if (!adm) {
-            const response = await prisma.administradores.create({
-                data: {
-                    matricula, 
-                    senha, 
-                }
-            });
-            
+
+        const senhavalida = bcrypt.compareSync(senha, user.senha);
+        if(!senhavalida){
+            res.redirect("/loginadm");
         }
         else {
-            res.redirect("/loginadm");
-       }
+            res.render('pages/administrador');
+        }
 
     }
 }
