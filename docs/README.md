@@ -87,7 +87,7 @@ O sistema está sendo representado por um retângulo e seu nome, controle de ped
 O ator, representado por bonecos palitos, é algo ou alguém que faz uso do sistema, nesse caso, o solicitante e administrador - que por serem objetos externos ao sistema estão do lado de fora do retângulo. O solicitante está localizado no lado esquerdo do sistema por ser o ator primário, ou seja, quem inicia a utilização do sistema. Nesse viés, o administrador está do lado direito, sendo assim, o ator secundário - quem irá reagir - dessa forma, o administrador só irá interagir com o sistema quando o solicitante fizer uma solicitação de algum pedido.
 
 <h5>3.1.1.3 Caso de uso</h5>
-O caso de uso - que por fazer parte do sistema está localizado dentro do retângulo- é a descrição do que o sistema faz. Nessa pespectiva, o sistema controler de pedidos será capaz de fazer cadastro, fazer login, fazer pedidos, aceitar ou recusar pedidos, emitir relatório e controlar o agendamento de pedidos.
+O caso de uso - que por fazer parte do sistema está localizado dentro do retângulo- é a descrição do que o sistema faz. Nessa pespectiva, o sistema controle de pedidos será capaz de fazer cadastro, fazer login, fazer pedidos, aceitar ou recusar pedidos, emitir relatório e controlar o agendamento de pedidos.
 
 <h5>3.1.1.4 Relacionamentos</h5>
 Cada ator do sistema precisa interagir com pelo menos um caso de uso, assim, o relacionamento, representado por uma linha sólida, em uma diagramação é essencial. Portanto, nesse sistema, o solicitante interage com os casos de uso: fazer cadastro, fazer login, fazer pedidos e o administrador interage com os casos de uso: fazer login, aceitar ou recusar pedidos, emitir relatório e controlar o agendamento de pedidos.
