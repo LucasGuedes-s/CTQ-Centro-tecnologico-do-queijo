@@ -96,7 +96,7 @@ Cada ator do sistema precisa interagir com pelo menos um caso de uso, assim, o r
 O banco de dados utilizado no projeto foi o PostgreSQL, como também, foi utilizado o prisma, um ORM(object-relational mapping), para auxiliar a criação da aplicação.
 
 <h3>4.1 Diagrama entidade-relacionamento</h3>
-Para melhor projeção do banco de dados foi criado um diagrama entidade relacionamento.
+Para melhor projeção do banco de dados foi criado um diagrama entidade-relacionamento.
 
 <img src="https://user-images.githubusercontent.com/106175060/211171165-bffc7ad3-69b0-4833-87f3-891ceb9d3a87.png" align="center" width="500">
 
