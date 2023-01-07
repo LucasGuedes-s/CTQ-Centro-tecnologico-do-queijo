@@ -98,7 +98,7 @@ O banco de dados utilizado no projeto foi o PostgreSQL, como também, foi utiliz
 <h4>3.2.1 Diagrama entidade relacionamento</h4>
 Para melhor projeção do banco de dados foi criado um diagrama entidade relacionamento.
 
-<img src="https://user-images.githubusercontent.com/106175060/211150751-b0237875-4f98-464e-beda-726b0f91003f.png" align="center" width="800">
+<img src="https://user-images.githubusercontent.com/106175060/211150751-b0237875-4f98-464e-beda-726b0f91003f.png" align="center" width="500">
 
 
 
