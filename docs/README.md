@@ -70,7 +70,7 @@ Requisitos relacionados ao uso da aplicação em termos de desempenho, usabilida
 **Design:** O design irá facilitar a visualização e a organização da plataforma, através do design as imagens dos produtos que estão sendo fabricados pelo Centro Tecnológico do Queijo (CTq) serão expostas para os clientes que têm acesso a plataforma.
 >**Prioridade:** Desejável.
 
-<h2>3. Análise dos requisitos e projeto</h2>
+<h2>3. Análise dos requisitos</h2>
 Análisando os requisitos e levando-se em consideração o tempo de implementação, foi definido que será desenvolvido os requisitos funcionais considerados essenciais para suprir as expectativas do cliente. Sendo eles: cadastrar solicitante, login do solicitante, solicitar produto, login do administrador, aceitar ou recusar pedidos, emissão do relatório e controle do agendamento de pedidos. Ademais, também foi considerado essencial alguns requisitos não funcionais que garantiriam a integridade do sistema e sua visualização, os referidos: segurança e design.
 
 <h3>3.1 Diagrama de caso de uso</h3>
@@ -92,7 +92,7 @@ O caso de uso - que por fazer parte do sistema está localizado dentro do retân
 <h5>3.1.1.4 Relacionamentos</h5>
 Cada ator do sistema precisa interagir com pelo menos um caso de uso, assim, o relacionamento, representado por uma linha sólida, em uma diagramação é essencial. Portanto, nesse sistema, o solicitante interage com os casos de uso: fazer cadastro, fazer login, fazer pedidos e o administrador interage com os casos de uso: fazer login, aceitar ou recusar pedidos, emitir relatório e controlar o agendamento de pedidos.
 
-<h3>3.2 Projeto do banco</h3>
+<h2>3.2 Projeto do banco de dados</h2>
 O banco de dados utilizado no projeto foi o PostgreSQL, como também, foi utilizado o prisma, um ORM(object-relational mapping), para auxiliar a criação da aplicação.
 
 <h3>3.2.1 Diagrama entidade-relacionamento</h3>
