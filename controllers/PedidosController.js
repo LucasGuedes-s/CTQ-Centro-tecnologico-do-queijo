@@ -2,7 +2,7 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient()
 
 class PedidosController {
-
+    
     async addpedido(req, res) {
         const body = req.body;
         const id = req.session.user;
@@ -13,8 +13,8 @@ class PedidosController {
         const estado = body.estado;
         const cep = body.cep;
         const endereco = body.endereco;
-        
         const data = body.data;
+        const status = "Analise"
         
         console.log(data);
 
@@ -42,8 +42,7 @@ class PedidosController {
                 endereco: endereco,
                 data: result,
                 authorId: id,
-                status: 'Analise'
-
+                status: status
             },
             include:{
                 author: true

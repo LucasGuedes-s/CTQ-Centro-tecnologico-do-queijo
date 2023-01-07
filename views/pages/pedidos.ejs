@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <%- include('../partials/head'); %>
+    <title>CTq- Cadastro </title>
+</head>
+
+<body>
+    <main>
+        <section class="vh-100" style="background-color: #2f9e41;">
+            <div class="container py-5 h-100">
+              <div class="row d-flex justify-content-center align-items-center" style="align-content: center ;">
+                <div class="col col-xl-10-">
+                  <div class="card" style="border-radius: 1rem;">
+                    <div class="row g-0"></div>
+                      <div class="col-md-6 col-lg-7  align-items-center">
+                        <div class="card-body p-4 p-lg-5 text-black" style="align-items:center ;">
+          
+                            <div class="d-flex align-items-center mb-3 pb-1">
+                              <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                            </div>
+                            <h5 class="fw-normal mb-3 pb-3" style="align-items: center;"> CTq - Bem Vindo administrador</h5>
+                            <div class="pt-1 mb-4">
+                            <table class="table table-striped table-hover" style="width: 1px; margin: 20%">
+                              <thead style="background-color: #4b0082; color: #fff; align-items: center;">
+                                  <tr>
+                                    <th>ID</th>
+                                    <th>E-mail</th>
+                                    <th>Produto</th>
+                                    <th>Quantidade</th>
+                                    <th>Cidade</th>
+                                    <th>Endereço</th>
+                                    <th>Status</th>
+                                    <th>Data</th>
+                                    <th>Ação (Aceitar/Recusar)</th>
+
+                                  </tr>
+                              </thead>
+
+                              <tbody>
+                                  <% if(pedidos.length <= 0) { %>
+                                          <tr>
+                                              <td>Nao existe pedidos cadastrado</td>
+                                          </tr>
+
+                                  <% } else{
+                          
+                                      for(let i=0; i < pedidos.length; i++) { %>
+                                          
+                                          <tr>
+                                            <td><%=pedidos[i].id %></td>
+
+                                              <td><%=pedidos[i].email %></td>
+                                              <td><%=pedidos[i].produto %></td>
+                                              <td><%=pedidos[i].quantidade %></td>
+                                              <td><%=pedidos[i].cidade %></td>
+                                              <td><%=pedidos[i].endereco %></td>
+                                              <td><%=pedidos[i].status %></td>
+                                              <td><%=pedidos[i].data %></td>
+                                              <td>
+                                                <a class="btn btn-dark btn-lg btn-block" type="submit" value="Aceitar" href="updateAceitar/<%=pedidos[i].id;%>">Aceitar</a>
+                                                <a class="btn btn-dark btn-lg btn-block" type="submit" value="Recusar" href="updateRecusar/<%=pedidos[i].id;%>">Recusar</a>
+                                              </td>
+                                          </tr>
+                                        
+                                        <%   
+                                        }
+                                        }
+                                        %>
+                                      </tbody>    
+                                    </table>
+                            </div>          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+    </main>
+</body>
+</html>
