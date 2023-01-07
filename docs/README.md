@@ -92,31 +92,31 @@ O caso de uso - que por fazer parte do sistema está localizado dentro do retân
 <h5>3.1.1.4 Relacionamentos</h5>
 Cada ator do sistema precisa interagir com pelo menos um caso de uso, assim, o relacionamento, representado por uma linha sólida, em uma diagramação é essencial. Portanto, nesse sistema, o solicitante interage com os casos de uso: fazer cadastro, fazer login, fazer pedidos e o administrador interage com os casos de uso: fazer login, aceitar ou recusar pedidos, emitir relatório e controlar o agendamento de pedidos.
 
-<h2>3.2 Projeto do banco de dados</h2>
+<h2>4. Projeto do banco de dados</h2>
 O banco de dados utilizado no projeto foi o PostgreSQL, como também, foi utilizado o prisma, um ORM(object-relational mapping), para auxiliar a criação da aplicação.
 
-<h3>3.2.1 Diagrama entidade-relacionamento</h3>
+<h3>4.1 Diagrama entidade-relacionamento</h3>
 Para melhor projeção do banco de dados foi criado um diagrama entidade relacionamento.
 
-<img src="https://user-images.githubusercontent.com/106175060/211150751-b0237875-4f98-464e-beda-726b0f91003f.png" align="center" width="500">
+<img src="https://user-images.githubusercontent.com/106175060/211171165-bffc7ad3-69b0-4833-87f3-891ceb9d3a87.png" align="center" width="500">
 
 O diagrama entidade-relacionamento representa como as entidades se relacionam dentro de um sistema. Logo, o diagrama do projeto controle de pedidos exemplifica como as entidades usuarios, pedidos e administradores se relacionam no sistema.
 
-<h4>3.2.1.1 Analisando os elementos do diagrama</h4>
+<h4>4.1.1 Analisando os elementos do diagrama</h4>
 
-<h5>3.2.1.1.1 Entidade</h5>
+<h5>4.1.1.1 Entidade</h5>
 
 A entidade, por definição, é algo que pode ser definido e que pode ter dados armazenados sobre ele- como uma pessoa, um objeto, conceito ou evento. No diagrama do projeto, as entidades existentes são os usuarios, os pedidos e os administradores. 
 
-<h5>3.2.1.1.2 Atributo</h5>
+<h5>4.1.1.2 Atributo</h5>
 
 Cada entidade possue seus atributos que são as suas características ou propriedades, a exemplo a entidade usuarios tem os atributos id, email, senha e nome.
 
-<h5>3.2.1.1.3 Relacionamento</h5>
+<h5>4.1.1.3 Relacionamento</h5>
 
 Os relacionamentos em um diagrama entidade-relacionamento são, por definição, como entidades atuam umas sobre as outras ou estão associadas uma com as outras. Por exemplo, na relação entre as entidades usuarios e pedidos, onde um usuário pode realizar um pedido, o relacionamento seria o ato de solicitar o pedido que conecta as duas entidades.
 
-<h5>3.2.1.1.4 Cardinalidade</h5>
+<h5>4.1.1.4 Cardinalidade</h5>
 
 A cardinalidade é usada para definir os atributos numéricos na relação entre duas entidades. No projeto as cardinalidades existentes é a relação entre usuarios e pedidos - do tipo um para muitos ou muitos para um, a depender  do sentido - onde apenas um usuário pode realizar muitos pedidos. Ademais, outra cardinalidade é a presente entre pedidos e administradores - um para muitos ou muitos para um, a depender do sentido - assim, um administrador tem acesso a muitos pedidos.
 
