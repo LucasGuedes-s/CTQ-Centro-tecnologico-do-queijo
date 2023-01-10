@@ -6,6 +6,10 @@ const saltRounds = 10;
 
 class UsuarioController{
 
+    async cadastro(req, res){
+        res.render('pages/cadastro');
+    }
+
     async adduser(req, res) {
         const body = req.body;
         const email = req.body.email;

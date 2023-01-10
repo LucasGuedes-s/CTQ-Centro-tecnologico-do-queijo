@@ -4,9 +4,12 @@ prisma = new PrismaClient()
 const bcrypt = require('bcrypt');
 const { Hash } = require('crypto');
 const saltRounds = 10;
-const { solicitar } = require('./SolicitarController');
 
 class LoginUserController {
+
+    async login(req, res){
+        res.render("pages/login")
+    }
 
     async loginuser(req, res) {
 
@@ -14,7 +17,6 @@ class LoginUserController {
         const email = body.email;
         const senha = body.senha;
         
-
         const user = await prisma.usuarios.findFirst({
             where: {
                 email: email,

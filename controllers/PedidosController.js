@@ -2,7 +2,11 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient()
 
 class PedidosController {
-    
+
+    async solicitar(req, res){
+        res.render('pages/solicitar');
+    }
+
     async addpedido(req, res) {
         const body = req.body;
         const id = req.session.user;
@@ -16,14 +20,13 @@ class PedidosController {
         const data = body.data;
         const status = "Analise"
         
-        console.log(data);
-
-        console.log('id aq', id);
+        //console.log(data);
+        //console.log('id aq', id);
         
         const date = new Date(data);
         const result = date.toISOString();
         
-        console.log(result);
+        //console.log(result);
 
         const user = await prisma.usuarios.findUnique({ where: { id: Number(id) } })
         if (!user) {

@@ -1,14 +1,11 @@
 const { PrismaClient } = require('@prisma/client');
 prisma = new PrismaClient()
-const nodemailer = require("nodemailer");
-//const smtpTransport = require('nodemailer-smtp-transport');
 
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt'); 
 
 class AdmController{
     async loginadm(req, res){
         res.render('pages/loginadm');
-
     }
     async administrador(req, res){
         
@@ -37,7 +34,6 @@ class AdmController{
         res.render("pages/pedidos", { pedidos });
     }
     async pedidos(req, res){
-
         const pedidostatus = "Analise";
         const statusped = await prisma.pedidos.findMany({
             where: {
@@ -45,7 +41,6 @@ class AdmController{
             }
         });
         res.render("pages/pedidos",{pedidos:statusped});
-        console.log(statusped);
     }
     async updateAceitar(req, res){ 
         const {id} = req.params;
@@ -93,6 +88,16 @@ class AdmController{
         doc.save("Relatório.pdf");
 
         res.render("pages/home",{doc});
+    }
+    async agenda(req, res){
+        const pedidostatus = "Aceito";
+        const statusped = await prisma.pedidos.findMany({
+            where: {
+                status: pedidostatus  
+            }
+        });
+        res.render("pages/agenda",{pedidos:statusped});
+        //console.log(statusped);
     }
 }
 
