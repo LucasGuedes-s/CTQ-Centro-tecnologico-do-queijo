@@ -24,7 +24,7 @@ Documentação do projeto de implementação de um software desenvolvido na mat�
          <img src="https://www.opus-software.com.br/wp-content/uploads/2018/09/nodejs.jpg" align="center" width="60">
       </td> 
       <td>
-          teste
+          Node.js- Ambiente de execução de JavaScript que estende sua capacidade para o lado do servidor.
       </td> 
   </tr> 
   <tr> 
@@ -32,7 +32,7 @@ Documentação do projeto de implementação de um software desenvolvido na mat�
           <img src="https://s3images.coroflot.com/user_files/individual_files/large_474993_8JKPIOE8SHnbazdmDqIJI87DH.jpg" align="center" width="60">
       </td> 
       <td>
-          teste
+          Prisma- ORM (object-relational mapping) Node.js.
       </td> 
   </tr> 
   <tr> 
@@ -40,39 +40,39 @@ Documentação do projeto de implementação de um software desenvolvido na mat�
          <img src="https://user-images.githubusercontent.com/106175060/211398525-6e76da98-a1cd-4b42-aadf-36929b7edb60.jpg" align="center" width="40">
       </td> 
       <td>
-          teste
+          Bcrypt- Método de criptografia do tipo hash.
       </td> 
   </tr> 
   <tr> 
       <td>
-         <img src="https://user-images.githubusercontent.com/106175060/211398688-2cc64746-8df9-4d91-b802-0b2d2c628ac9.png" align="center" width="35">    
+         <img src="https://user-images.githubusercontent.com/106175060/211658945-ba4fadb8-7e31-42f3-8445-7506a3a4c7fb.png" align="center" width="60">    
       </td> 
       <td>
-          teste
-      </td> 
-  </tr> 
-    <tr> 
-      <td>
-         <img src="https://user-images.githubusercontent.com/106175060/211398688-2cc64746-8df9-4d91-b802-0b2d2c628ac9.png" align="center" width="35">    
-      </td> 
-      <td>
-          teste
+          JsPDF- Biblioteca JavaScript que permite gerar arquivos PDF de forma programática.
       </td> 
   </tr> 
-    <tr> 
+  <tr> 
       <td>
-         <img src="https://user-images.githubusercontent.com/106175060/211398688-2cc64746-8df9-4d91-b802-0b2d2c628ac9.png" align="center" width="35">    
+         <img src="https://user-images.githubusercontent.com/106175060/211659735-f7ddb0bb-3e6e-426a-a50d-c0da5aeb6662.png" align="center" width="60">    
       </td> 
       <td>
-          teste
+          Moment.js- Biblioteca JavaScript que manipula datas e tempo em páginas web e aplicativos.
       </td> 
   </tr> 
-    <tr> 
+  <tr> 
       <td>
-         <img src="https://user-images.githubusercontent.com/106175060/211398688-2cc64746-8df9-4d91-b802-0b2d2c628ac9.png" align="center" width="35">    
+         <img src="https://user-images.githubusercontent.com/106175060/211663681-4a7beb09-294f-4c7b-8c68-9b4cecb4eb1e.png" align="center" width="60">    
       </td> 
       <td>
-          teste
+          Express.js- Framework para Node.js que fornece recursos mínimos para construção de servidores web.
+      </td> 
+  </tr> 
+  <tr> 
+      <td>
+         <img src="https://user-images.githubusercontent.com/106175060/211663681-4a7beb09-294f-4c7b-8c68-9b4cecb4eb1e.png" align="center" width="60">    
+      </td> 
+      <td>
+          Express-session- Método que armazena os dados da sessão no servidor.
       </td> 
   </tr> 
 </table> 
@@ -175,11 +175,5 @@ A cardinalidade é usada para definir os atributos numéricos na relação entre
 
 
  
-
-
-
-
-
-
 
 
